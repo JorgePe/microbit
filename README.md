@@ -41,7 +41,7 @@ If you have Nordic nRF Connect App you can already control the LED Matrix or rea
 
 Now for the EV3 to make use of these BLE services it need to run ev3dev linux. I will assume that you already know how to install and configure ev3dev and then connect to your EV3 through ssh and activate Bluetooth so I just explain what to do after:
 
-We need a python library that supports BLE. Currently ev3dev includes pybluez ang gattlib buth it doesn't work the micro:bit so I added [pygatt]()https://github.com/peplin/pygatt.
+We need a python library that supports BLE. Currently ev3dev includes pybluez ang gattlib buth it doesn't work with the micro:bit so I added [pygatt]()https://github.com/peplin/pygatt.
 
 ```
    sudo apt-get install python3-pip
