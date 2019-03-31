@@ -43,9 +43,11 @@ Now for the EV3 to make use of these BLE services it need to run ev3dev linux. I
 
 We need a python library that supports BLE. Currently ev3dev includes pybluez ang gattlib buth it doesn't work the micro:bit so I added [pygatt]()https://github.com/peplin/pygatt.
 
-```sudo apt-get install python3-pip```
-```sudo pip3 install pexpect```
-```sudo pip3 install pygatt```
+```
+   sudo apt-get install python3-pip
+   sudo pip3 install pexpect```
+   sudo pip3 install pygatt
+```
 
 it will take a while so be sure to have fresh batteries or a wall adapter charging a EV3 battery.
 
