@@ -45,7 +45,7 @@ We need a python library that supports BLE. Currently ev3dev includes pybluez an
 
 ```
    sudo apt-get install python3-pip
-   sudo pip3 install pexpect```
+   sudo pip3 install pexpect
    sudo pip3 install pygatt
 ```
 
