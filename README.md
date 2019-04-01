@@ -55,13 +55,13 @@ Now just transfer the [demo01.py](https://github.com/JorgePe/microbit/blob/maste
 
 Just two notes about the script:
 
-+ The micro:bit requires a connection of type random (it is the only BLE device where I have to set this option, had to dig into the pygatt source code to find it)
++ The micro:bit requires a connection of type random (it is the only BLE device I own where I have to set this option, had to dig into the pygatt source code to find it)
 ```
    device = adapter.connect('F5:91:E3:32:23:39',address_type=pygatt.BLEAddressType.random)
 ```
 + I had to use the LED Matrix handle instead of the UUID because pygatt complains that no characteristic is found that matches it. The handle is 0x27 but it can change with future versions of the firmware (you can check the actual handle with the Nordic nRF Connect App or with a tool like 'gatttool').
 
-A video showing the above script running:
+A [video](https://youtu.be/7sGR8Ce65QA) showing the above script running:
 [![EV3 and micro:bit](https://66.media.tumblr.com/97e82bcb856c7ac19df3f3683e98ae88/tumblr_ppaise45aV1ws4ayp_1280.jpg)](https://youtu.be/7sGR8Ce65QA "EV3 and micro:bit")
 
-The [writemsg1.py](https://github.com/JorgePe/microbit/blob/master/writemsg1.py) script shows how to use just the LED Matrix service to draw some squares and crosses (a very shor short video: https://youtu.be/AHGr_eLJYz0)
+The [writemsg1.py](https://github.com/JorgePe/microbit/blob/master/writemsg1.py) script shows how to use just the LED Matrix service to draw some squares and crosses (a very short video: https://youtu.be/AHGr_eLJYz0)
