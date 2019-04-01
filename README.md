@@ -55,3 +55,5 @@ Now just transfer the [demo01.py](https://github.com/JorgePe/microbit/blob/maste
 
 Just a note about the script: I had to use the LED Matrix handle instead of the UUID because pygatt complains that no characteristic is found that matches it. The handle is 0x27 but it can change with future versions of the firmware (you can check the actual handle with the Nordic nRF Connect App or with a tool like 'gatttool').
 
+A video showing the above script running:
+![https://66.media.tumblr.com/97e82bcb856c7ac19df3f3683e98ae88/tumblr_ppaise45aV1ws4ayp_1280.jpg](https://youtu.be/7sGR8Ce65QA)
