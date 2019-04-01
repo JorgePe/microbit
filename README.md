@@ -57,3 +57,5 @@ Just a note about the script: I had to use the LED Matrix handle instead of the 
 
 A video showing the above script running:
 [![EV3 and micro:bit](https://66.media.tumblr.com/97e82bcb856c7ac19df3f3683e98ae88/tumblr_ppaise45aV1ws4ayp_1280.jpg)](https://youtu.be/7sGR8Ce65QA "EV3 and micro:bit")
+
+The [writemsg1.py](https://github.com/JorgePe/microbit/blob/master/writemsg1.py) script shows how to use just the LED Matrix service to draw some squares and crosses (a very shor short video: https://youtu.be/AHGr_eLJYz0)
