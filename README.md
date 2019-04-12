@@ -65,3 +65,18 @@ A [video](https://youtu.be/7sGR8Ce65QA) showing the above script running:
 [![EV3 and micro:bit](https://66.media.tumblr.com/97e82bcb856c7ac19df3f3683e98ae88/tumblr_ppaise45aV1ws4ayp_1280.jpg)](https://youtu.be/7sGR8Ce65QA "EV3 and micro:bit")
 
 The [writemsg1.py](https://github.com/JorgePe/microbit/blob/master/writemsg1.py) script shows how to use just the LED Matrix service to draw some squares and crosses (a very short video: https://youtu.be/AHGr_eLJYz0)
+
+As you probably noticed in the video, the responsiveness to the buttons is bad. Yes, EV3 hasn't the faster processor of h world but the micro:bit BLE services also don't seem much fast. So how can this be useful?
+
+I started using BLE gadgets as a way to get sensory data. With the EV3 that's a way to get extra sensors without additional connections, some times even sensors that aren't available in LEGO world. Most of the time, we don't need real time access to the data - 1 to 10 samples each second are usually enough. So how can we use the micro:bit for that?
+
+For onboard sensors, like the buttons or the temperature sensor, there are already BLE services that expose that data. But since the micro:bit also has several GPIO pins available, we can also use external sensors and expose the data through the micro:bit' BLE UART Service.
+
+I'll show how to use this to add a wireless ultrasonic distance sensor to the MINDSTORMS EV3:
+
+The HC-SR04 ultrasonic sensor is quite common among Arduino users and can also be ![used with the micro:bit](http://www.teachwithict.com/hcsr045v.html). The Makecode online editor already has a 'sonar' extension for it so the resulting program is quite simple:
+
+![Program](https://github.com/JorgePe/microbit/blob/master/makecode-ultrasonic-ble.png)
+
+
+ 	
