@@ -82,3 +82,9 @@ On the EV3 side we just need to connect to the micro:bit and then subscribe to t
 
 The [ultrasonic-ble-speak-2.py](https://github.com/JorgePe/microbit/blob/master/ultrasonic-ble-speak-2.py) script makes just that, printing the distance in the EV3 display but also speaking it loud:
 [![Micro:bit Ultrasonic Sensor and EV3](https://i9.ytimg.com/vi/gnZdKOMnr2E/mq2.jpg?sqp=CJy8weUF&rs=AOn4CLAfBCdQWLpNinD4KkZGjjiYK6Crxw)](https://youtu.be/gnZdKOMnr2E "Micro:bit Ultrasonic Sensor and EV3")
+
+Just a note about the subscribing step with pygatt: on my Ubuntu laptop, subscribing to the TX characteristic always work fine. But in the EV3 running ev3dev the same script failed:
+
+```pygatt.exceptions.BLEError: No characteristic found matching 6e400002-b5a3-f393-e0a9-e50e24dcca9"```
+
+I am using same pygatt library on both devices (4.0.3) and the linux kernels aren's much different by now so the BlueZ stack is probably the same so I was about to give up when I decided to try to repeat the command - so I included it inside a while loop and used the try/except commands (something new for me so excuse me it it looks ugly code). And it worked - usually the first try fails but the second works fine. Not sure if it is just because of the slower CPU...
