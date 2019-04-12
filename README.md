@@ -74,9 +74,11 @@ For onboard sensors, like the buttons or the temperature sensor, there are alrea
 
 I'll show how to use this to add a wireless ultrasonic distance sensor to the MINDSTORMS EV3:
 
-The HC-SR04 ultrasonic sensor is quite common among Arduino users and can also be ![used with the micro:bit](http://www.teachwithict.com/hcsr045v.html). The Makecode online editor already has a 'sonar' extension for it so the resulting program is quite simple:
+The HC-SR04 ultrasonic sensor is quite common among Arduino users and can also be ![used with the micro:bit](http://www.teachwithict.com/hcsr045v.html). The Makecode online editor already has a 'sonar' extension for it so the resulting program is quite simple - just read the value from the sensor once per second, display the result on the LED matrix and also send it over BLE to whoever might be listening.
 
 ![Program](https://github.com/JorgePe/microbit/blob/master/makecode-ultrasonic-ble.png)
 
+On the EV3 side we just need to connect to the micro:bit and then subscribe to the micro:bit BLE UART TX characteristic in indication mode so that everytime the micro:bit sends a new reading we will receive it.
 
- 	
+The [ultrasonic-ble-speak-2.py](https://github.com/JorgePe/microbit/blob/master/ultrasonic-ble-speak-2.py) script makes just that, printing the distance in the EV3 display but also speaking it loud:
+[![Micro:bit Ultrasonic Sensor and EV3](https://i9.ytimg.com/vi/gnZdKOMnr2E/mq2.jpg?sqp=CJy8weUF&rs=AOn4CLAfBCdQWLpNinD4KkZGjjiYK6Crxw)](https://youtu.be/gnZdKOMnr2E "Micro:bit Ultrasonic Sensor and EV3")
