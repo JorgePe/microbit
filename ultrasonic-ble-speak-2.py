@@ -13,7 +13,7 @@ def handle_data(handle, value):
     value -- bytearray, the data returned in the notification
     """
     distance = int(value.decode("utf-8"))
-    print("Dist = {0:.2f} metros".format(distance/100) )
+    print("Dist = {0:.2f} m".format(distance/100) )
     sound.speak(value.decode("utf-8"))
 
 adapter = pygatt.GATTToolBackend()
